@@ -5,7 +5,7 @@ from datetime import date
 
 # Static instrument list
 instrument_list = [
-    "Lux Meter",
+    "Lux Meter", "Fluke Power Analyzer",
     "Ultrasonic Flow Meter",
     "Clamp On Meter",
     "Multimeter",
@@ -50,3 +50,4 @@ if st.session_state.form_data:
     st.download_button("⬇️ Download CSV", data=csv, file_name="issued_instruments.csv", mime="text/csv")
 else:
     st.info("No entries yet.")
+
