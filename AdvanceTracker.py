@@ -35,7 +35,7 @@ with st.form("issue_form"):
             "Issuer Name": name,
             "Instrument": instrument,
             "Issue Date": issue_date,
-            "Tentative Return Date": return_date
+            "Tentative Return Date": return_date,
             "Instrument Quantity": Qty
         }
         st.session_state.form_data.append(entry)
@@ -52,6 +52,7 @@ if st.session_state.form_data:
     st.download_button("⬇️ Download CSV", data=csv, file_name="issued_instruments.csv", mime="text/csv")
 else:
     st.info("No entries yet.")
+
 
 
 
