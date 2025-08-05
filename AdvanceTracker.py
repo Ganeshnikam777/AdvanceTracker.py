@@ -14,7 +14,7 @@ instrument_list = [
     "Distance Gun"
 ]
 
-issuer_names = ["Vinay", "Pratik", "Naif", "Murtadha", "Irshad", "Habib", "Rahim"]
+issuer_names = ["Vinay", "Pratik", "Ganesh", "Naif", "Murtadha", "Irshad", "Habib", "Rahim"]
 
 # Initialize session state
 if "form_data" not in st.session_state:
@@ -82,3 +82,4 @@ if st.session_state["form_data"]:
         st.success("CSV downloaded and form has been reset.")
 else:
     st.info("No entries yet.")
+
