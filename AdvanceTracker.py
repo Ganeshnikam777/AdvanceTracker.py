@@ -27,7 +27,7 @@ with st.form("issue_form"):
     instrument = st.selectbox("Select Instrument", instrument_list)
     issue_date = st.date_input("Issue Date", value=date.today())
     return_date = st.date_input("Tentative Return Date")
-    Quantity = st.number_input("Instrumrnt Quantity")
+    Qty = st.number_input("Instrumrnt Quantity")
 
     submitted = st.form_submit_button("Add Entry")
     if submitted:
@@ -36,6 +36,7 @@ with st.form("issue_form"):
             "Instrument": instrument,
             "Issue Date": issue_date,
             "Tentative Return Date": return_date
+            "Instrument Quantity": Qty
         }
         st.session_state.form_data.append(entry)
         st.success("Entry added successfully!")
@@ -51,5 +52,6 @@ if st.session_state.form_data:
     st.download_button("⬇️ Download CSV", data=csv, file_name="issued_instruments.csv", mime="text/csv")
 else:
     st.info("No entries yet.")
+
 
 
